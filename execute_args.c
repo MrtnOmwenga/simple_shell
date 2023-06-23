@@ -15,11 +15,11 @@ char *builtin_func_list[] = {
 "help",
 "exit"
 };
-int (*builtin_func[])(char **) = {
-&own_cd,
-&own_env,
-&own_help,
-&own_exit
+int (*builtin_func[])(void) = {
+own_cd,
+own_env,
+own_help,
+own_exit
 };
 unsigned long int i = 0;
 
@@ -34,7 +34,7 @@ for (i = 0; i < sizeof(builtin_func_list) / sizeof(char *); i++)
 /* if there is a match execute the builtin command */
 if (strcmp(args[0], builtin_func_list[i]) == 0)
 {
-return ((*builtin_func[i])(args));
+return ((*builtin_func[i])());
 }
 }
 /* create a new process */

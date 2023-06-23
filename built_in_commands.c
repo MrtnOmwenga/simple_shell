@@ -40,6 +40,5 @@ return (0);
  */
 int own_exit(void)
 {
-printf("Working on it... \n");
 return (0);
 }
