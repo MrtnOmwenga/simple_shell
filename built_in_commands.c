@@ -49,5 +49,5 @@ return (0);
  */
 int own_exit(void)
 {
-exit(0);
+exit(1);
 }
