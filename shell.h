@@ -29,9 +29,9 @@ int new_process(char **args);
 char *read_stream(void);
 
 /*---Builtin func---*/
-int own_cd();
-int own_exit();
-int own_env();
-int own_help();
+int own_cd(void);
+int own_exit(void);
+int own_env(void);
+int own_help(void);
 
 #endif

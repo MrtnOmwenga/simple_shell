@@ -21,10 +21,10 @@ int (*builtin_func[])(char **) = {
 &own_help,
 &own_exit
 };
-long unsigned int i = 0;
+unsigned long int i = 0;
 
 if (args[0] == NULL)
- {
+{
 /* empty command was entered */
 return (-1);
 }
